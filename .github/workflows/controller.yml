@@ -3,8 +3,12 @@ name: Controller
 on:
   push:
     branches: [ "main" ]
+    paths:
+      - controller/**
   pull_request:
     branches: [ "main" ]
+    paths:
+      - controller/**
 
 env:
   CARGO_TERM_COLOR: always
