@@ -34,11 +34,10 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Add Pengutronics Repository
-      run: |
-        echo "deb [signed-by=/usr/share/keyrings/pengutronix-archive-keyring.gpg] http://debian.pengutronix.de/debian/ bookworm main contrib non-free" > /etc/apt/sources.list.d/pengutronix.list
-        apt -o="Acquire::AllowInsecureRepositories=true" update
-        apt-get install -y --allow-unauthenticated pengutronix-archive-keyring
-        apt-get update
+      uses: gerlero/add-apt-repository@v1
+      with:
+        uri: http://debian.pengutronix.de/debian
+        key: https://debian.pengutronix.de/ptx-archive-key.gpg
     - name: Install OESLA toolchain
       run: apt-get install -y oselas.toolchain-2024.11.1-x86-64-unknown-linux-gnu-gcc-14.2.1-clang-19.1.7-glibc-2.40-binutils-2.43.1-kernel-6.11.6-sanitized
     - name: Install PTXDist Dependencies
