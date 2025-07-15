@@ -5,10 +5,12 @@ on:
     branches: [ "main" ]
     paths:
       - controller/**
+      - .github/workflows/controller.yml
   pull_request:
     branches: [ "main" ]
     paths:
       - controller/**
+      - .github/workflows/controller.yml
 
 env:
   CARGO_TERM_COLOR: always
