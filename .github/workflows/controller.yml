@@ -82,6 +82,11 @@ jobs:
         path: src/
         key: build
 
+    - name: Install Distro Dependencies
+      uses: gerlero/apt-install@v1
+      with:
+        packages: python3.11-venv bc 
+
     # Builds the Linux kernel and software.
     - name: Cross-compile distro
       run: |
