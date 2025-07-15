@@ -59,7 +59,7 @@ jobs:
       id: cache-ptxdist-src
       uses: actions/cache@v4
       with:
-        path: ptxdist-2025.05.0
+        path: controller/distro/ptxdist-2025.05.0
         key: ptxdist-2025.05.0-src
 
     # Caches the build PTXDist program.
@@ -83,8 +83,8 @@ jobs:
       id: cache-build
       uses: actions/cache@v4
       with:
-        path: src/
-        key: build
+        path: controller/distro/src/
+        key: build-sources
 
     - name: Install Build Dependencies
       uses: gerlero/apt-install@v1
@@ -114,4 +114,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: images
-        path: platform-x86_64/images
+        path: controller/distro/platform-x86_64/images
