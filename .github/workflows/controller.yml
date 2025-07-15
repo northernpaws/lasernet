@@ -35,7 +35,7 @@ jobs:
     - uses: actions/checkout@v4
     - name: Add Pengutronics Repository
       run: |
-        sudo echo "deb [signed-by=/usr/share/keyrings/pengutronix-archive-keyring.gpg] http://debian.pengutronix.de/debian/ bookworm main contrib non-free" > /etc/apt/sources.list.d/pengutronix.list
+        echo "deb [signed-by=/usr/share/keyrings/pengutronix-archive-keyring.gpg] http://debian.pengutronix.de/debian/ noble main contrib non-free" | sudo tee --append /etc/apt/sources.list.d/pengutronix.list
         sudo apt -o="Acquire::AllowInsecureRepositories=true" update
         sudo apt-get install -y --allow-unauthenticated pengutronix-archive-keyring
         sudo apt-get update
