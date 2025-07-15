@@ -1,3 +1,0 @@
-#!/bin/sh
-
-detect mmc1 mmc2 mmc3
