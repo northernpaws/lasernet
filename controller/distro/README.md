@@ -79,6 +79,8 @@ $ ptxdist toolchain /opt/OSELAS.Toolchain-2024.11.1/x86_64-unknown-linux-gnu/gcc
 
 Now that we have the right platform and configs selected, we can build the Linux distro!
 
+Building the Linux distro will take several minutes, potentially up to an hour or two depending on your host hardware.
+
 ```bash
 # Build the Linux tools, programs, kernel, etc.
 $ ptxdist go
