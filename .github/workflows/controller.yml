@@ -87,8 +87,7 @@ jobs:
     
     # Bundles everthing up into images for distribution and installation.
     - name: Create distro images
-      run:
-        - ptxdist images
+      run: ptxdist images
     
     # TODO: archive the RAUC update bundle on it's own
     - name: Archive distro images
