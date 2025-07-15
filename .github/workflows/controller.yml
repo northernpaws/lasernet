@@ -82,10 +82,11 @@ jobs:
         path: src/
         key: build
 
-    - name: Install Distro Dependencies
-      uses: gerlero/apt-install@v1
+    # Used by the build tools.
+    - name: Set up Python 3.11
+      uses: actions/setup-python@v2
       with:
-        packages: python3.11-venv bc 
+        python-version: 3.11
 
     # Builds the Linux kernel and software.
     - name: Cross-compile distro
