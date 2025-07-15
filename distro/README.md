@@ -52,8 +52,18 @@ Next, we need to install the PTXDist tool. PTXDist is mostly a collection of she
 $ wget https://public.pengutronix.de/software/ptxdist/ptxdist-2025.05.0.tar.bz2
 $ tar -xjf ptxdist-2025.05.0.tar.bz2
 $ cd ptxdist-2025.05.0
-$ apt install build-essential pkg-config ncurses-dev gawk flex bison texinfo unzip 
+$ apt install build-essential pkg-config ncurses-dev gawk flex bison texinfo unzip
 $ ./configure
 $ make
 $ sudo make install
+```
+
+Now that we have the compiler toolchain and PTXDist tool installed, we can set the active set of project, platform and toolchain configs to reference the local project, and the previously installed toolchain package.
+
+```bash
+$ cd distro/
+$ apt install python3.11-venv
+$ ptxdist select configs/ptxconfig
+$ ptxdist platform configs/platform-x86_64/platformconfig
+$ ptxdist toolchain /opt/OSELAS.Toolchain-2024.11.1/x86_64-unknown-linux-gnu/gcc-14.2.1-clang-19.1.7-glibc-2.40-binutils-2.43.1-kernel-6.11.6-sanitized/bin
 ```
