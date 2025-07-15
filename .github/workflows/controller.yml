@@ -82,6 +82,11 @@ jobs:
         path: src/
         key: build
 
+    - name: Install Build Dependencies
+      uses: gerlero/apt-install@v1
+      with:
+        packages: bc
+
     # Used by the build tools.
     - name: Set up Python 3.11
       uses: actions/setup-python@v2
@@ -91,7 +96,6 @@ jobs:
     # Builds the Linux kernel and software.
     - name: Cross-compile distro
       run: |
-        apt install python3.11-venv bc 
         ptxdist select configs/ptxconfig
         ptxdist platform configs/platform-x86_64/platformconfig
         ptxdist toolchain /opt/OSELAS.Toolchain-2024.11.1/x86_64-unknown-linux-gnu/gcc-14.2.1-clang-19.1.7-glibc-2.40-binutils-2.43.1-kernel-6.11.6-sanitized/bin
