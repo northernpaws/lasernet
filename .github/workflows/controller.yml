@@ -1,0 +1,98 @@
+name: Controller
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  # Ensure the software tests pass before we attempt to build the distro.
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: controller/software
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions-rust-lang/setup-rust-toolchain@v1
+    - name: Build
+      run: cargo build --verbose
+    - name: Run tests
+      run: cargo test --verbose
+  
+  # Now we can build the Linux distro!
+  distro:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: controller/distro
+    needs: [test]
+    steps:
+    - uses: actions/checkout@v4
+    - name: Add Pengutronics Repository
+      run:
+        - echo "deb [signed-by=/usr/share/keyrings/pengutronix-archive-keyring.gpg] http://debian.pengutronix.de/debian/ bookworm main contrib non-free" > /etc/apt/sources.list.d/pengutronix.list
+        - apt -o="Acquire::AllowInsecureRepositories=true" update
+        - apt-get install -y --allow-unauthenticated pengutronix-archive-keyring
+        - apt-get update
+    - name: Install OESLA toolchain
+      run: apt-get install -y oselas.toolchain-2024.11.1-x86-64-unknown-linux-gnu-gcc-14.2.1-clang-19.1.7-glibc-2.40-binutils-2.43.1-kernel-6.11.6-sanitized
+    - name: Install PTXDist Dependencies
+      run: apt install build-essential pkg-config ncurses-dev gawk flex bison texinfo unzip
+
+    # Caches the sources used to build PTXDist.
+    - name: Cache PTXDist Sources
+      id: cache-ptxdist-src
+      uses: actions/cache@v4
+      with:
+        path: ptxdist-2025.05.0
+        key: ptxdist-2025.05.0-src
+
+    # Caches the build PTXDist program.
+    - name: Cache PTXDist Bin
+      id: cache-ptxdist
+      uses: actions/cache@v4
+      with:
+        path: /usr/local/lib/ptxdist-2025.05.0
+        key: ptxdist-2025.05.0
+
+    - name: Install PTXDist
+      run:
+        - wget https://public.pengutronix.de/software/ptxdist/ptxdist-2025.05.0.tar.bz2
+        - tar -xjf ptxdist-2025.05.0.tar.bz2
+        - cd ptxdist-2025.05.0
+        - ./configure
+        - make
+        - sudo make install
+
+    - name: Cache build artifacts
+      id: cache-build
+      uses: actions/cache@v4
+      with:
+        path: src/
+        key: build
+
+    # Builds the Linux kernel and software.
+    - name: Cross-compile distro
+      run:
+        - apt install python3.11-venv bc 
+        - ptxdist select configs/ptxconfig
+        - ptxdist platform configs/platform-x86_64/platformconfig
+        - ptxdist toolchain /opt/OSELAS.Toolchain-2024.11.1/x86_64-unknown-linux-gnu/gcc-14.2.1-clang-19.1.7-glibc-2.40-binutils-2.43.1-kernel-6.11.6-sanitized/bin
+        - ptxdist go
+    
+    # Bundles everthing up into images for distribution and installation.
+    - name: Create distro images
+      run:
+        - ptxdist images
+    
+    # TODO: archive the RAUC update bundle on it's own
+    - name: Archive distro images
+      uses: actions/upload-artifact@v4
+      with:
+        name: images
+        path: platform-x86_64/images
