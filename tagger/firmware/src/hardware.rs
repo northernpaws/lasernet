@@ -66,11 +66,16 @@ impl Default for Hardware<'_> {
 
         let mut spi_config = spi::Config::default();
         spi_config.frequency = Hertz(1_000_000);
-        let mut lcd_spi = spi::Spi::new_blocking(p.SPI3, p.PC10, p.PC12, p.PC11, spi_config);
+        let lcd_spi = spi::Spi::new_blocking(
+            p.SPI1, 
+            p.PA5, // D13 on STM32F401re Nucleo
+             p.PA7, // D11 on STM32F401re Nucleo
+             p.PA6, // D12 on STM32F401re Nucleo
+             spi_config);
 
-        let lcd_dc = Output::new(p.PB13, Level::High, Speed::Low);
-        let lcd_cs = Output::new(p.PB13, Level::High, Speed::Low);
-        let lcd_rst = Output::new(p.PB13, Level::High, Speed::Low);
+        let lcd_dc = Output::new(p.PC7 , Level::High, Speed::Low); // D9 on STM32F401re Nucleo
+        let lcd_cs = Output::new(p.PB6  , Level::High, Speed::Low); // D10 on STM32F401re Nucleo
+        let lcd_rst = Output::new(p.PA8, Level::High, Speed::Low); // D7 on STM32F401re Nucleo
         
         Self {
             led,
