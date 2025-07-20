@@ -1,25 +1,17 @@
-use cortex_m::singleton;
-
-use defmt::info;
-
 use embassy_stm32::{
     bind_interrupts, gpio::{
         self,
         Level,
         Output,
         Speed
-    }, interrupt::InterruptExt as _, mode, pac::Interrupt, peripherals, spi, time::Hertz, usart, Config
+    },
+    mode,
+    peripherals,
+    spi,
+    time::Hertz,
+    usart,
+    Config
 };
-
-// use assign_resources::assign_resources;
-
-// assign_resources! {
-//     uart: SerialResources {
-//         uart: USART1,
-//         rx: PA3,
-//         tx: PA2
-//     }
-// }
 
 bind_interrupts!(struct Irqs {
     USART2 => usart::BufferedInterruptHandler<peripherals::USART2>;
@@ -73,9 +65,9 @@ impl Default for Hardware<'_> {
              p.PA6, // D12 on STM32F401re Nucleo
              spi_config);
 
-        let lcd_dc = Output::new(p.PC7 , Level::High, Speed::Low); // D9 on STM32F401re Nucleo
-        let lcd_cs = Output::new(p.PB6  , Level::High, Speed::Low); // D10 on STM32F401re Nucleo
-        let lcd_rst = Output::new(p.PA8, Level::High, Speed::Low); // D7 on STM32F401re Nucleo
+        let lcd_dc = Output::new(p.PC7 , Level::Low, Speed::High); // D9 on STM32F401re Nucleo
+        let lcd_cs = Output::new(p.PB6  , Level::Low, Speed::High); // D10 on STM32F401re Nucleo
+        let lcd_rst = Output::new(p.PA8, Level::High, Speed::High); // D7 on STM32F401re Nucleo
         
         Self {
             led,

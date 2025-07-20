@@ -1,5 +1,7 @@
 # Lasernet
 
+[![Controller](https://github.com/northernpaws/lasernet/actions/workflows/controller.yml/badge.svg)](https://github.com/northernpaws/lasernet/actions/workflows/controller.yml) [![Tagger](https://github.com/northernpaws/lasernet/actions/workflows/tagger.yml/badge.svg)](https://github.com/northernpaws/lasernet/actions/workflows/tagger.yml)
+
 This repository contains the software, hardware, and CAD files for retrofitting lasertag.net Falcon systems with an open-source platform. This involves replacing the PCBs in the tagger and vest units with new Zigbee-controlled PCBs, and having a computer with a Zigbee radio to communicate with them and run the game supervisor software. Additional devices, such as tablets, can be used to manage games over a web interface.
 
 This project is currently a work-in-progress until release v1.0.0. More details for how to assemble the system will be added below as it evolves.

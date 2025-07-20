@@ -13,8 +13,14 @@ use {
     panic_probe as _
 };
 
+use embedded_graphics::{
+    pixelcolor::Rgb565,
+    prelude::RgbColor,
+    draw_target::DrawTarget
+};
+
 use embassy_executor::Spawner;
-use embassy_time::Timer;
+use embassy_time::{Delay, Timer};
 
 use st7789v2_driver::{ST7789V2, VERTICAL};
 
@@ -38,7 +44,6 @@ async fn inner_main(_spawner: Spawner) -> Result<Never> {
     let mut hardware = hardware::Hardware::default();   
 
     // Initialize the display
-    info!("initializing ST7789V2 driver");
     let mut display = ST7789V2::new(
         hardware.lcd_spi,
         hardware.lcd_dc,
@@ -49,6 +54,18 @@ async fn inner_main(_spawner: Spawner) -> Result<Never> {
         240,
         240,
     );
+
+    // Get a handle to the embassy-time Delay wrapper.
+    let mut delay = Delay;
+
+    // Initialize the ST7789V2 dispaly driver, passing in the embassy-time
+    // delay implementation for STM32 for syncronizing the command delays.
+    info!("initializing ST7789V2 driver");
+    display.init(&mut delay).unwrap();
+
+    // Clear the screen before turning on the backlight.
+    info!("clearing the display");
+    display.clear(Rgb565::BLACK).unwrap();
 
     info!("starting loop");
     loop {
