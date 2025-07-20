@@ -1,0 +1,65 @@
+[package]
+name = "tagger"
+version = "0.1.0"
+edition = "2021"
+
+[profile.dev]
+opt-level = 3
+debug = true
+
+# ref: https://embassy.dev/book/#_why_is_my_binary_so_big
+[profile.release]
+lto = true
+opt-level = "s"
+incremental = false
+codegen-units = 1
+# note: debug = true is okay - debuginfo isn't flashed to the device!
+debug = true
+
+[dependencies]
+embedded-hal = { version = "1.0.0" }
+embedded-graphics = { version = "0.8.1" }
+
+embassy-executor = { version = "0.7.0", features = ["arch-cortex-m", "executor-thread", "defmt"] }
+embassy-time = { version = "0.4.0", features = ["defmt", "defmt-timestamp-uptime", "tick-hz-32_768", ] }
+embassy-stm32 = { version = "0.2.0", features = [
+    "defmt",
+    "unstable-pac",
+    "stm32f401re",
+    "memory-x",
+    "time-driver-any",
+    "exti",
+    "chrono"
+]}
+#"stm32l433rc",
+embassy-sync = "0.7.0"
+
+defmt = "1.0.1"
+defmt-rtt = "1.0.0"
+
+cortex-m = { version = "0.7.6", features = ["critical-section-single-core"] }
+cortex-m-rt = "0.7.0"
+panic-probe = { version = "1.0.0", features = ["print-defmt"] }
+
+# Core/embedded-save error trait derrivatives.
+derive_more = { version = "2.0.1", default-features = false, features = [
+    "debug",
+    "display",
+    "error",
+    "from",
+]}
+
+embedded-io = "0.6.1"
+assign-resources = "0.4" # upgrade to 0.5 on next embassy release
+st7789v2_driver = "0.1.0"
+
+# [dependencies.xbee-rs]
+# path = "../../common/xbee-rs"
+# default-features = false
+# features = ["stm32"]
+
+# [dependencies.taglib]
+# path = "../../common/taglib"
+
+# [dependencies.taglib-stm32]
+# path = "../../common/taglib-stm32"

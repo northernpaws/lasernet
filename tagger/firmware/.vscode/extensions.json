@@ -1,0 +1,9 @@
+{
+    "recommendations": [
+        "arm.device-manager",
+        "marus25.cortex-debug",
+        "probe-rs.probe-rs-debugger",
+        "tamasfe.even-better-toml",
+        "rust-lang.rust-analyzer"
+    ]
+}

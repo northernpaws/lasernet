@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "tagger/firmware",
+			"name": "Tagger Firmware"
+		}
+	],
+	"settings": {}
+}

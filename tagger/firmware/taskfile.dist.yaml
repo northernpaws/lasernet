@@ -1,0 +1,10 @@
+version: '3'
+
+tasks:
+  cargo:clean:
+    cmds:
+      - cargo clean
+
+  cargo:build:
+    cmds:
+      - cargo build --profile dev --target 
