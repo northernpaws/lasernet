@@ -1,5 +1,0 @@
-#!/bin/sh
-
-global.bootm.appendroot=1
-global.bootm.image="/mnt/disk0.4/boot/bzImage"
-global.bootm.initrd="mnt/disk0.4/sbin/init"

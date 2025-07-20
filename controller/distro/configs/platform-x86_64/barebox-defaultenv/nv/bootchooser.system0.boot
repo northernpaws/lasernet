@@ -1,1 +1,1 @@
-disk0.root-A
+rootA
