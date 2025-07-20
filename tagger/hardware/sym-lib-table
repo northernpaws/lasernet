@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "RF_XBee")(type "KiCad")(uri "/Users/keith/Documents/KiCad/Projects/lasertag/hardware/libraries/RF_XBee.kicad_sym")(options "")(descr ""))
+)
