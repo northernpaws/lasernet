@@ -3,6 +3,11 @@ name = "tagger"
 version = "0.1.0"
 edition = "2021"
 
+[[bin]]
+name = "tagger"
+test = false
+bench = false
+
 [profile.dev]
 opt-level = 3
 debug = true
