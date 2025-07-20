@@ -4,6 +4,8 @@ This repository contains the software, hardware, and CAD files for retrofitting 
 
 This project is currently a work-in-progress until release v1.0.0. More details for how to assemble the system will be added below as it evolves.
 
+[Tagger Schematics (KiCanvas)](https://kicanvas.org/?github=https%3A%2F%2Fgithub.com%2Fnorthernpaws%2Flasernet%2Fblob%2Fmain%2Ftagger%2Fhardware%2Ftagger.kicad_pro)
+
 ## Components
 
  - An existing lasertag.net Falcon system
