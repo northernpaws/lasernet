@@ -1,1 +1,1 @@
-/dev/sda
+disk0.root-A
