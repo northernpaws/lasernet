@@ -1,8 +1,31 @@
 # Lasernet
 
-This repositry contains the software, hardware, and CAD files for retrofitting lasertag.net Falcon systems with an open-source platform. The goal of this repository is to provide a bundle of the electronics and software compoennts needed to retrofit an existing lasertag.net Falcon system with open-source hardware and software.
+This repository contains the software, hardware, and CAD files for retrofitting lasertag.net Falcon systems with an open-source platform. This involves replacing the PCBs in the tagger and vest units with new Zigbee-controlled PCBs, and having a computer with a Zigbee radio to communicate with them and run the game supervisor software. Additional devices, such as tablets, can be used to manage games over a web interface.
 
-A couple of off-the-shelf components are also needed for the system - namely some type of PC (I like refurbished Lenovo ThinkCentre Tiny's for their compact size), and a Zigbee interface for it - the current iteration using a  SMLIGHT SLZB-06M over a PoE switch, the PoE simplifying running it to a mount ~12ft up the wall without needing additional power. More details for how to assemble the system will be added below as it evolves.
+This project is currently a work-in-progress until release v1.0.0. More details for how to assemble the system will be added below as it evolves.
+
+## Components
+
+ - An existing lasertag.net Falcon system
+ - The retrofit PCBs for the taggers and vests
+ - A computer to run the game supervisor
+ - A Zigbee interface for the supervisor computer
+
+### Game Supervisor/Controller Computer
+
+For this system you need some type of computer to run the Zigbee interface and game controller software that connects to the units and manages their state, health, etc.
+
+This PC replaces the need for all the units in the system to connect back to an Android tablet over Wifi like the stock laserag.net system does, eliminating Wifi instability from the tablet sleeping, being powered off, battery running out, etc.
+
+We particularly like refurbished Lenovo ThinkCentre Tiny's (such as the M900) for their compact size, power management features (such as auto-power on after power loss), multi-display options, ample USB powers, and an ethernet port, Wifi, and Bluetooth package that gives many options for connectivity. Their reburbished prices are also incredibly afforable, with an M900 with an i7 coming in at around $100CAD, and being office PCs their refurbishment condition tends to be excellent.
+
+### Computer to Zigbee Interface
+
+To communicate with the new units you'll need some type of Zigbee radio or relay that can serve as the Zigbee network coordinator, and allow the PC running the management software to communicate with it. 
+
+Initial software support will be for XBee 3 units in API Mode connected over USB serial, and Texas Instruments Z-Stack devices such as the SMLIGHT SLZB-06M.
+
+We personally like the SMLIGHT SLZB-06M as it can be powered with PoE, simplifying running it to a mount ~12ft up the wall by using a single cable without needing to source additional power at the mounting location. The SLZB-06M is also highly configurable, has suitable range for most indoor arenas, all bundled up into a nice small and portable package that's easy to mount.
 
 ## Motivation
 
