@@ -1,0 +1,24 @@
+/ {
+    aliases {
+        state = &state;
+    };
+
+    state: state {
+        magic = <0xDEADBEEF>;
+        compatible = "barebox,state";
+        backend-type = "raw";
+        backend = <&state_part>;
+        backend-stridesize = <4096>; /* partition must be at least 3x this*/
+    
+        /* initial variables */
+    }
+
+    partitions {
+        compatible = "fixed-partitions";
+
+        state_part: state {
+            label = "state";
+            partuuid = "4778ed65-bf42-45fa-9c5b-287a1dc4aab1";
+        }
+    }
+};

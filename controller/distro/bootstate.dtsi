@@ -1,0 +1,20 @@
+aliases {
+    state = &state;
+}
+
+state: state {
+    magic = <0xDEADBEEF>;
+    compatible = "barebox,state";
+    backend-type = "raw";
+    backend = <&state_part>;
+    backend-stridesize = <4096>; /* partition must be at least 3x this */
+}
+
+partitions {
+    compatible = "fixed-partitions";
+
+    state_part: state {
+        label = "barebox-state";
+        parduuid = "";
+    }
+}
