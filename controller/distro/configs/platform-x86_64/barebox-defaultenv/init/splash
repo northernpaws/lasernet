@@ -1,0 +1,14 @@
+#!/bin/sh
+
+SPLASH=/boot/splash.png
+
+if [ ! -f $SPLASH ]; then
+    exit 0
+fi
+
+splash $SPLASH
+
+fb0.enable=1
+
+msleep 100
+
