@@ -1,11 +1,10 @@
+/dts-v1/;
 / {
     aliases {
         state = &state;
     };
 
     state: state {
-        #address-cells = <1>;
-        #size-cells = <1>;
         magic = <0xDEADBEEF>;
         compatible = "barebox,state";
         backend-type = "raw";
@@ -54,7 +53,7 @@
                         type = "uint32";
                  };
          };
-    }
+    };
 
     partitions {
         compatible = "fixed-partitions";
@@ -62,6 +61,6 @@
         state_part: state {
             label = "state";
             partuuid = "4778ed65-bf42-45fa-9c5b-287a1dc4aab1";
-        }
-    }
+        };
+    };
 };

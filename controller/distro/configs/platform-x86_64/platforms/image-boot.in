@@ -1,0 +1,8 @@
+## SECTION=image
+
+config IMAGE_BOOT
+	tristate
+	select HOST_GENIMAGE
+	prompt "Generate images/boot.img"
+	help
+	  FIXME
