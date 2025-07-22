@@ -1,6 +1,6 @@
 #!/bin/sh
 
 global.bootm.appendroot=1
-global.bootm.image=/mnt/disk0.5/boot/bzImage
+global.bootm.image=/mnt/disk0.3/boot/bzImage
 
 bootm
