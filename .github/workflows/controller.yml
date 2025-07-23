@@ -101,7 +101,6 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: 3.11
-        cache: 'pip'
     
     # Install Python build dependencies
     - name: Install Python build dependencies
