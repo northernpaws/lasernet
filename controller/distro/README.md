@@ -71,7 +71,7 @@ Once we have the compiler toolchain and PTXDist tool installed, we can set the a
 
 ```bash
 $ cd distro/
-$ apt install python3.11-venv bc 
+$ apt install python3.11-venv python3-yaml bc 
 $ ptxdist select configs/ptxconfig
 $ ptxdist platform configs/platform-x86_64/platformconfig
 $ ptxdist toolchain /opt/OSELAS.Toolchain-2024.11.1/x86_64-unknown-linux-gnu/gcc-14.2.1-clang-19.1.7-glibc-2.40-binutils-2.43.1-kernel-6.11.6-sanitized/bin
