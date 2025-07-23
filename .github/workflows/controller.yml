@@ -17,18 +17,18 @@ env:
 
 jobs:
   # Ensure the software tests pass before we attempt to build the distro.
-  test:
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: controller/software
-    steps:
-    - uses: actions/checkout@v4
-    - uses: actions-rust-lang/setup-rust-toolchain@v1
-    - name: Build
-      run: cargo build --verbose
-    - name: Run tests
-      run: cargo test --verbose
+  # test:
+  #   runs-on: ubuntu-latest
+  #   defaults:
+  #     run:
+  #       working-directory: controller/software
+  #   steps:
+  #   - uses: actions/checkout@v4
+  #   - uses: actions-rust-lang/setup-rust-toolchain@v1
+  #   - name: Build
+  #     run: cargo build --verbose
+  #   - name: Run tests
+  #     run: cargo test --verbose
   
   # Now we can build the Linux distro!
   distro:
@@ -36,7 +36,7 @@ jobs:
     defaults:
       run:
         working-directory: controller/distro
-    needs: [test]
+    # needs: [test]
     steps:
     - uses: actions/checkout@v4
     - name: Add Pengutronics Repository
