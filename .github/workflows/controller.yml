@@ -96,16 +96,21 @@ jobs:
           controller/distro/platform-x86_64/
         key: ptxdist-build
 
-    - name: Install Build Dependencies
-      uses: gerlero/apt-install@v1
-      with:
-        packages: bc libxml-parser-perl python3-yaml
-
     # Used by the build tools.
     - name: Set up Python 3.11
       uses: actions/setup-python@v2
       with:
         python-version: 3.11
+        cache: 'pip'
+    
+    # Install Python build dependencies
+    - name: Install Python build dependencies
+      run: pip install PyYAML
+
+    - name: Install Build Dependencies
+      uses: gerlero/apt-install@v1
+      with:
+        packages: bc libxml-parser-perl
 
     # Builds the Linux kernel and software.
     - name: Cross-compile distro
