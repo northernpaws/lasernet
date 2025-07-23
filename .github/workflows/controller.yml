@@ -64,6 +64,12 @@ jobs:
         path: controller/distro/ptxdist-2025.05.0
         key: ptxdist-2025.05.0-src
 
+    # Fixes issues with the PTXDist bin directory not being writable for caching.
+    - name: Fix ~/.cache permissions
+      run: |
+        sudo mkdir /usr/local/lib/ptxdist-2025.05.0
+        sudo chown -R $(whoami):$(id -ng) /usr/local/lib/ptxdist-2025.05.0
+
     # Caches the build PTXDist program.
     - name: Cache PTXDist Bin
       id: cache-ptxdist
