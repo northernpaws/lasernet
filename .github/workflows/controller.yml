@@ -93,7 +93,7 @@ jobs:
     - name: Install Build Dependencies
       uses: gerlero/apt-install@v1
       with:
-        packages: bc libxml-parser-perl
+        packages: bc libxml-parser-perl python3-yaml
 
     # Used by the build tools.
     - name: Set up Python 3.11
