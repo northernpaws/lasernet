@@ -1,5 +1,7 @@
 # distro
 
+> NOTICE: This is currently a WIP and not currently used. The Clang and LLVM requirements introduced by Wayland and MESA make the build times take far too long, so we need to research alternatives.
+
 This directory contains the PTXDist project for building the base OS images for the game supervisor computer. 
 
 The project in this directory is based off [Pengutronix's DistroKit](https://git.pengutronix.de/cgit/DistroKit/).
