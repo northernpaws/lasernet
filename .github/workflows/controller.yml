@@ -111,6 +111,14 @@ jobs:
       with:
         packages: bc libxml-parser-perl
 
+    # Check that configs are up to date so the build doesn't crash in the middle.
+    - name: Check PTXDist configs
+      run: |
+        ptxdist alldefconfig
+        ptxdist alldefconfig platform
+        ptxdist alldefconfig barebox
+        ptxdist alldefconfig kernel
+
     # Builds the Linux kernel and software.
     - name: Cross-compile distro
       run: |
