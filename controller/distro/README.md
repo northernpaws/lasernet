@@ -4,7 +4,7 @@ This directory contains the PTXDist project for building the base OS images for 
 
 The project in this directory is based off [Pengutronix's DistroKit](https://git.pengutronix.de/cgit/DistroKit/).
 
-## Setup
+## Building
 
 > PTXDist does not work nicely on MacOS due to MacOS's bundled bash version being <4.2. PTXDist relies in several places on case fallthrough operators that require 4.2, and due to not using the proper `#!/usr/bin/env bash` shebang it's incredily difficult to configure it to use another one.
 
@@ -22,8 +22,6 @@ The project in this directory is based off [Pengutronix's DistroKit](https://git
  - OSELAS.Toolchain-2024.11.1
 
 > The version numbers of PTXDist and OSELAS.Toolchain() are important, PTXDist _must_ be matched to the version expected by OSELAS.Toolchain().
-
-### Linux Instructions
 
 #### Toolchain
 
@@ -65,7 +63,7 @@ $ make
 $ sudo make install
 ```
 
-## Building
+### Build
 
 Once we have the compiler toolchain and PTXDist tool installed, we can set the active set of project, platform and toolchain configs to reference the local project, and the previously installed toolchain package.
 
@@ -90,4 +88,9 @@ $ ptxdist images
 
 Now you should have image files in `platform-x86_64/images`!
 
-The main image file that we care about is `hd.img`, it's a partitioned image containing the EFI bootloader and kernel ready to run on a target x86 system.
+The main image file that we care about is `boot.img`, it's a partitioned image containing the EFI bootloader and kernel ready to run on a target x86 system.
+
+The image can be tested in QEMU with:
+```bash
+qemu-system-x86 -bios /user/share/ovmf/OVMF.d -m 500M platform-x86/images/boot.img
+```
