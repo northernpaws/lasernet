@@ -32,7 +32,7 @@ jobs:
   
   # Now we can build the Linux distro!
   distro:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     defaults:
       run:
         working-directory: controller/distro
