@@ -3665,6 +3665,19 @@
 		)
 		(uuid "5400430f-4a9c-4fbb-ae26-7e519b5d937f")
 	)
+	(text "REMOVE USB PORT"
+		(exclude_from_sim no)
+		(at 44.704 101.6 0)
+		(effects
+			(font
+				(size 3.81 3.81)
+				(thickness 0.762)
+				(bold yes)
+				(color 255 0 0 1)
+			)
+		)
+		(uuid "574b3e97-4cd5-4f82-ad70-220216dff48d")
+	)
 	(text "Diodes prevents backflow\nto attatched USB device"
 		(exclude_from_sim no)
 		(at 73.406 75.692 0)
@@ -3675,6 +3688,19 @@
 			)
 		)
 		(uuid "67928089-eab6-4756-8aa9-818d7f44ff7e")
+	)
+	(text "REPLACE WITH NON-USB CHARGER"
+		(exclude_from_sim no)
+		(at 137.414 93.472 0)
+		(effects
+			(font
+				(size 3.81 3.81)
+				(thickness 0.762)
+				(bold yes)
+				(color 255 0 0 1)
+			)
+		)
+		(uuid "a37d703e-a49a-4297-8550-86a9931840d7")
 	)
 	(text "Primary supply for the circuit"
 		(exclude_from_sim no)

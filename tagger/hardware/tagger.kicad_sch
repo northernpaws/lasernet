@@ -5865,6 +5865,19 @@
 		)
 		(uuid f1364391-e0cd-4f3d-b286-63c253fb9660)
 	)
+	(text "CONNECT BUTTONS"
+		(exclude_from_sim no)
+		(at 245.618 36.576 0)
+		(effects
+			(font
+				(size 3.81 3.81)
+				(thickness 0.762)
+				(bold yes)
+				(color 255 0 0 1)
+			)
+		)
+		(uuid "0181478a-1883-4f38-a765-7cab28e5ed75")
+	)
 	(text "ST7789V2"
 		(exclude_from_sim no)
 		(at 69.85 193.04 0)
@@ -5898,6 +5911,19 @@
 			(justify left bottom)
 		)
 		(uuid "4dd6fc4f-6b19-452e-9fb0-3af4fd3366f1")
+	)
+	(text "REPLACE WITH F1 or F0"
+		(exclude_from_sim no)
+		(at 98.044 86.36 0)
+		(effects
+			(font
+				(size 3.81 3.81)
+				(thickness 0.762)
+				(bold yes)
+				(color 255 0 0 1)
+			)
+		)
+		(uuid "567c83a0-3a2d-4c24-bb3b-08fd1f00ca02")
 	)
 	(text "TODO: select better crystal 8mhz\n"
 		(exclude_from_sim no)
@@ -6775,7 +6801,7 @@
 	)
 	(wire
 		(pts
-			(xy 195.58 2.54) (xy 195.58 5.08)
+			(xy 177.8 26.67) (xy 177.8 29.21)
 		)
 		(stroke
 			(width 0)
@@ -7035,7 +7061,7 @@
 	)
 	(wire
 		(pts
-			(xy 189.23 7.62) (xy 195.58 7.62)
+			(xy 171.45 31.75) (xy 177.8 31.75)
 		)
 		(stroke
 			(width 0)
@@ -7255,7 +7281,7 @@
 	)
 	(wire
 		(pts
-			(xy 189.23 5.08) (xy 195.58 5.08)
+			(xy 171.45 29.21) (xy 177.8 29.21)
 		)
 		(stroke
 			(width 0)
@@ -7895,7 +7921,7 @@
 	)
 	(wire
 		(pts
-			(xy 195.58 7.62) (xy 195.58 10.16)
+			(xy 177.8 31.75) (xy 177.8 34.29)
 		)
 		(stroke
 			(width 0)
@@ -13681,7 +13707,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x02_Socket")
-		(at 184.15 5.08 0)
+		(at 166.37 29.21 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -13690,7 +13716,7 @@
 		(dnp no)
 		(uuid "b71bca45-9da1-41f7-bada-80fce20b9f4e")
 		(property "Reference" "J7"
-			(at 184.15 1.778 0)
+			(at 166.37 25.908 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13698,7 +13724,7 @@
 			)
 		)
 		(property "Value" "TETHER_DATA"
-			(at 184.15 -0.762 0)
+			(at 166.37 23.368 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13706,7 +13732,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 184.15 5.08 0)
+			(at 166.37 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13715,7 +13741,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 184.15 5.08 0)
+			(at 166.37 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13724,7 +13750,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated"
-			(at 184.15 5.08 0)
+			(at 166.37 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13733,7 +13759,7 @@
 			)
 		)
 		(property "Conn" "JST S02B-PASK-2"
-			(at 184.15 10.668 0)
+			(at 166.37 34.798 0)
 			(effects
 				(font
 					(size 1.27 1.27)
