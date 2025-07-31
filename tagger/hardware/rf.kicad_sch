@@ -5,7 +5,7 @@
 	(uuid "ef95ed6a-e88f-4b0f-a9e8-d756e7dd975e")
 	(paper "A4")
 	(lib_symbols
-		(symbol "Connector:Conn_01x07_Pin"
+		(symbol "Connector:Conn_01x06_Pin"
 			(pin_names
 				(offset 1.016)
 				(hide yes)
@@ -14,14 +14,14 @@
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "J"
-				(at 0 10.16 0)
+				(at 0 7.62 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Value" "Conn_01x07_Pin"
+			(property "Value" "Conn_01x06_Pin"
 				(at 0 -10.16 0)
 				(effects
 					(font
@@ -47,7 +47,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Generic connector, single row, 01x07, script generated"
+			(property "Description" "Generic connector, single row, 01x06, script generated"
 				(at 0 0 0)
 				(effects
 					(font
@@ -82,18 +82,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "Conn_01x07_Pin_1_1"
-				(rectangle
-					(start 0.8636 7.747)
-					(end 0 7.493)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
+			(symbol "Conn_01x06_Pin_1_1"
 				(rectangle
 					(start 0.8636 5.207)
 					(end 0 4.953)
@@ -158,18 +147,6 @@
 					)
 					(fill
 						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 7.62) (xy 0.8636 7.62)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
 					)
 				)
 				(polyline
@@ -245,7 +222,7 @@
 					)
 				)
 				(pin passive line
-					(at 5.08 7.62 180)
+					(at 5.08 5.08 180)
 					(length 3.81)
 					(name "Pin_1"
 						(effects
@@ -263,7 +240,7 @@
 					)
 				)
 				(pin passive line
-					(at 5.08 5.08 180)
+					(at 5.08 2.54 180)
 					(length 3.81)
 					(name "Pin_2"
 						(effects
@@ -281,7 +258,7 @@
 					)
 				)
 				(pin passive line
-					(at 5.08 2.54 180)
+					(at 5.08 0 180)
 					(length 3.81)
 					(name "Pin_3"
 						(effects
@@ -299,7 +276,7 @@
 					)
 				)
 				(pin passive line
-					(at 5.08 0 180)
+					(at 5.08 -2.54 180)
 					(length 3.81)
 					(name "Pin_4"
 						(effects
@@ -317,7 +294,7 @@
 					)
 				)
 				(pin passive line
-					(at 5.08 -2.54 180)
+					(at 5.08 -5.08 180)
 					(length 3.81)
 					(name "Pin_5"
 						(effects
@@ -335,7 +312,7 @@
 					)
 				)
 				(pin passive line
-					(at 5.08 -5.08 180)
+					(at 5.08 -7.62 180)
 					(length 3.81)
 					(name "Pin_6"
 						(effects
@@ -345,24 +322,6 @@
 						)
 					)
 					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 -7.62 180)
-					(length 3.81)
-					(name "Pin_7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1838,6 +1797,18 @@
 		)
 	)
 	(rectangle
+		(start 123.19 166.37)
+		(end 173.99 195.58)
+		(stroke
+			(width 0)
+			(type dash)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 07919f61-1f8c-4296-8a2e-8b7e5e5c8023)
+	)
+	(rectangle
 		(start 202.565 15.24)
 		(end 281.94 51.435)
 		(stroke
@@ -1909,6 +1880,18 @@
 		)
 		(uuid "9c92d3de-7259-47d0-adb0-afe5cb9709f7")
 	)
+	(text "XBee Bootloader Interface (P.g. 92)"
+		(exclude_from_sim no)
+		(at 124.46 194.31 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 132 132 132 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "a36cc878-00de-4533-9fdc-744c54cb1f48")
+	)
 	(text "Digi XBee® 3 ZigBee® User Guide P.g. 276\n\nOutputs PWM indicating the signal strength\nof the last packet hop.\n\nHelps indicate if the radio link is stable."
 		(exclude_from_sim no)
 		(at 204.216 56.896 0)
@@ -1932,6 +1915,19 @@
 			(justify left top)
 		)
 		(uuid "d579d086-d636-4f6c-9d46-0de696bcc6a7")
+	)
+	(text "XBee Bootloader"
+		(exclude_from_sim no)
+		(at 124.46 168.148 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify left top)
+		)
+		(uuid "fd909089-6981-4622-a851-d443e3986910")
 	)
 	(junction
 		(at 101.6 69.85)
@@ -2059,7 +2055,7 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 177.8) (xy 148.59 177.8)
+			(xy 137.16 179.07) (xy 149.86 179.07)
 		)
 		(stroke
 			(width 0)
@@ -2099,17 +2095,7 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 185.42) (xy 148.59 185.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "31a9ee63-e311-4079-95d5-7e6600e58e4b")
-	)
-	(wire
-		(pts
-			(xy 135.89 182.88) (xy 148.59 182.88)
+			(xy 137.16 184.15) (xy 149.86 184.15)
 		)
 		(stroke
 			(width 0)
@@ -2169,7 +2155,7 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 187.96) (xy 138.43 187.96)
+			(xy 137.16 186.69) (xy 139.7 186.69)
 		)
 		(stroke
 			(width 0)
@@ -2189,7 +2175,7 @@
 	)
 	(wire
 		(pts
-			(xy 166.37 175.26) (xy 166.37 186.69)
+			(xy 167.64 176.53) (xy 167.64 187.96)
 		)
 		(stroke
 			(width 0)
@@ -2299,7 +2285,7 @@
 	)
 	(wire
 		(pts
-			(xy 138.43 172.72) (xy 135.89 172.72)
+			(xy 139.7 173.99) (xy 137.16 173.99)
 		)
 		(stroke
 			(width 0)
@@ -2369,7 +2355,7 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 175.26) (xy 166.37 175.26)
+			(xy 137.16 176.53) (xy 167.64 176.53)
 		)
 		(stroke
 			(width 0)
@@ -2519,7 +2505,7 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 180.34) (xy 148.59 180.34)
+			(xy 137.16 181.61) (xy 149.86 181.61)
 		)
 		(stroke
 			(width 0)
@@ -2568,7 +2554,7 @@
 		(uuid "3b02e6a5-b5b3-4dbe-a129-9c18d7eb813c")
 	)
 	(label "UART_PWR"
-		(at 138.43 172.72 0)
+		(at 139.7 173.99 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2638,7 +2624,7 @@
 		(uuid "cd251be1-b5e7-4842-ac1c-516c9b43e6d8")
 	)
 	(label "UART_DTR"
-		(at 138.43 187.96 0)
+		(at 139.7 186.69 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2681,7 +2667,7 @@
 	)
 	(hierarchical_label "RF_UART_DIN"
 		(shape input)
-		(at 148.59 177.8 0)
+		(at 149.86 179.07 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2692,7 +2678,7 @@
 	)
 	(hierarchical_label "RF_UART_RTS"
 		(shape input)
-		(at 148.59 182.88 0)
+		(at 149.86 184.15 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2714,7 +2700,7 @@
 	)
 	(hierarchical_label "RF_UART_DOUT"
 		(shape output)
-		(at 148.59 180.34 0)
+		(at 149.86 181.61 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2733,17 +2719,6 @@
 			(justify right)
 		)
 		(uuid "5f1ee9c1-8b64-450f-b060-b3d70998a62f")
-	)
-	(hierarchical_label "RF_UART_CTS"
-		(shape input)
-		(at 148.59 185.42 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "b8a82776-dfba-430c-a13d-69abda1e7b4a")
 	)
 	(hierarchical_label "RF_UART_RTS"
 		(shape input)
@@ -2829,6 +2804,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "JLC" ""
+			(at 276.86 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -2963,6 +2946,14 @@
 				(hide yes)
 			)
 		)
+		(property "JLC" ""
+			(at 101.6 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "05f0f23c-052b-4615-820f-752b66006b34")
 		)
@@ -2973,6 +2964,85 @@
 			(project "tagger"
 				(path "/7f9981c1-8446-4881-979b-6d88a629918c/b67527ae-871d-46f9-8cb4-d3003ac65ae8"
 					(reference "R14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x06_Pin")
+		(at 132.08 179.07 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2e2ef852-25ee-42cd-982d-adb7d32bd3fc")
+		(property "Reference" "J1"
+			(at 130.048 175.006 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "XBEE_BOOTLOADER"
+			(at 135.636 188.976 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.00mm:PinHeader_1x06_P2.00mm_Vertical"
+			(at 132.08 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 132.08 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x06, script generated"
+			(at 132.08 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "965ecdfc-c683-42af-a409-eb35cab23885")
+		)
+		(pin "4"
+			(uuid "806fb778-e5a6-4249-821a-25c59b113b2d")
+		)
+		(pin "6"
+			(uuid "7781f8c2-07ec-4fc3-a259-2dd753eaeaed")
+		)
+		(pin "1"
+			(uuid "7e06d41d-5770-47ad-966e-ad9df21fa124")
+		)
+		(pin "5"
+			(uuid "880a116b-3aaa-4765-a1dd-da14986f6db6")
+		)
+		(pin "2"
+			(uuid "90c835ac-7e7e-4496-9acb-4cac35a19d0e")
+		)
+		(instances
+			(project ""
+				(path "/7f9981c1-8446-4881-979b-6d88a629918c/b67527ae-871d-46f9-8cb4-d3003ac65ae8"
+					(reference "J1")
 					(unit 1)
 				)
 			)
@@ -3040,6 +3110,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "JLC" ""
+			(at 276.86 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -3119,6 +3197,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "JLC" ""
+			(at 276.86 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -3251,6 +3337,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "JLC" ""
+			(at 57.15 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
@@ -3518,6 +3612,14 @@
 				(hide yes)
 			)
 		)
+		(property "JLC" ""
+			(at 276.86 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "c10c5e8a-9dee-4b92-afe2-123f1eac08c0")
 		)
@@ -3671,6 +3773,14 @@
 				(hide yes)
 			)
 		)
+		(property "JLC" ""
+			(at 101.6 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "11"
 			(uuid "e5770ebb-5dea-4c2f-bee8-f50b84b1352c")
 		)
@@ -3822,6 +3932,14 @@
 				(hide yes)
 			)
 		)
+		(property "JLC" ""
+			(at 276.86 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "d12bacea-fa18-4f2b-a56a-5c6749e86c26")
 		)
@@ -3908,6 +4026,14 @@
 				(hide yes)
 			)
 		)
+		(property "JLC" ""
+			(at 107.95 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "3a435cbe-a99a-4048-9fcf-e29281b7974e")
 		)
@@ -3918,88 +4044,6 @@
 			(project "tagger"
 				(path "/7f9981c1-8446-4881-979b-6d88a629918c/b67527ae-871d-46f9-8cb4-d3003ac65ae8"
 					(reference "D9")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:Conn_01x07_Pin")
-		(at 130.81 180.34 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "ca17540d-15c0-46b2-a97e-54f3187fdef9")
-		(property "Reference" "J3"
-			(at 130.81 169.418 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "RADIO_UART"
-			(at 130.81 191.262 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 130.81 180.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 130.81 180.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x07, script generated"
-			(at 130.81 180.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "0b5f92b4-1c14-4396-ad29-6fc09a0864cd")
-		)
-		(pin "2"
-			(uuid "46aab4cc-cee3-4ca2-91b7-eff0d331384b")
-		)
-		(pin "3"
-			(uuid "9cea58b9-eac4-41d0-9c25-b6a162e941aa")
-		)
-		(pin "4"
-			(uuid "f1b688b5-5567-45ae-bb3c-4b7928a4969b")
-		)
-		(pin "5"
-			(uuid "76f79ab5-1df4-43dd-b66f-4d17d92250a8")
-		)
-		(pin "6"
-			(uuid "4d4ffdc4-e718-4e10-8fe6-29c4b54430e1")
-		)
-		(pin "7"
-			(uuid "1d782fbd-a839-405d-be69-f08783bb27bf")
-		)
-		(instances
-			(project ""
-				(path "/7f9981c1-8446-4881-979b-6d88a629918c/b67527ae-871d-46f9-8cb4-d3003ac65ae8"
-					(reference "J3")
 					(unit 1)
 				)
 			)
@@ -4022,7 +4066,7 @@
 				)
 			)
 		)
-		(property "Value" "RADIO_COMMISSION"
+		(property "Value" "COMMISSION"
 			(at 255.27 146.05 0)
 			(effects
 				(font
@@ -4057,6 +4101,14 @@
 				(hide yes)
 			)
 		)
+		(property "JLC" ""
+			(at 255.27 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "73e55834-3b9d-439a-890f-4847f25b58a2")
 		)
@@ -4074,7 +4126,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 166.37 186.69 0)
+		(at 167.64 187.96 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4082,7 +4134,7 @@
 		(dnp no)
 		(uuid "e85dd4c7-dab0-428f-8638-a83cb8af7050")
 		(property "Reference" "#PWR098"
-			(at 166.37 193.04 0)
+			(at 167.64 194.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4091,7 +4143,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 166.37 191.008 0)
+			(at 167.64 192.278 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4099,7 +4151,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 166.37 186.69 0)
+			(at 167.64 187.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4108,7 +4160,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 166.37 186.69 0)
+			(at 167.64 187.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4117,7 +4169,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 166.37 186.69 0)
+			(at 167.64 187.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4210,6 +4262,14 @@
 				(hide yes)
 			)
 		)
+		(property "JLC" ""
+			(at 101.6 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "37008013-8e91-465f-86c6-d5af56e944dd")
 		)
@@ -4278,6 +4338,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "JLC" ""
+			(at 276.86 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
