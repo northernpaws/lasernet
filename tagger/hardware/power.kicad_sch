@@ -1439,6 +1439,12 @@
 		(uuid "d1729ce9-98c8-4363-b7f2-39007a9717b7")
 	)
 	(junction
+		(at 72.39 53.34)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "11ad18c2-5f54-4e17-83e5-4f71f1e00e6d")
+	)
+	(junction
 		(at 146.05 41.91)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1516,11 +1522,9 @@
 		(color 0 0 0 0)
 		(uuid "d99ea67e-118e-45df-a213-63bcfee7a032")
 	)
-	(junction
-		(at 86.36 29.21)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "de530cec-af16-4399-838c-cb2339f321c0")
+	(no_connect
+		(at 88.9 34.29)
+		(uuid "d6adac57-72b1-4d33-8c02-c8beaae59896")
 	)
 	(wire
 		(pts
@@ -1551,16 +1555,6 @@
 			(type default)
 		)
 		(uuid "07628018-f82b-462d-a859-8a523f5e1940")
-	)
-	(wire
-		(pts
-			(xy 86.36 34.29) (xy 86.36 29.21)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "09ae7d02-f428-40fa-ba34-9bcf617181a9")
 	)
 	(wire
 		(pts
@@ -1654,13 +1648,13 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 34.29) (xy 86.36 34.29)
+			(xy 69.85 53.34) (xy 72.39 53.34)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "28fc9fb7-411f-403b-b720-222f8f255b50")
+		(uuid "48747884-e1c0-4c01-af1d-55a0d08d0015")
 	)
 	(wire
 		(pts
@@ -1854,7 +1848,7 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 29.21) (xy 81.28 29.21)
+			(xy 81.28 29.21) (xy 88.9 29.21)
 		)
 		(stroke
 			(width 0)
@@ -1911,16 +1905,6 @@
 			(type default)
 		)
 		(uuid "e1b904c2-fe48-4691-8f90-4c84673139a3")
-	)
-	(wire
-		(pts
-			(xy 88.9 29.21) (xy 86.36 29.21)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e7e4addd-46ed-4d80-89ea-b066201cc1f0")
 	)
 	(wire
 		(pts
@@ -3333,6 +3317,72 @@
 			(project "tagger"
 				(path "/7f9981c1-8446-4881-979b-6d88a629918c/71e7c18f-1f33-427d-8bd6-9eec09af0cc4"
 					(reference "R18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 69.85 53.34 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f753e51a-497f-498f-9d6c-dc83689183b6")
+		(property "Reference" "TP5"
+			(at 68.326 51.308 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "GND"
+			(at 68.58 55.626 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Bridge_Pitch2.54mm_Drill1.0mm"
+			(at 69.85 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 69.85 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 69.85 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f69df327-4af3-482d-8188-5fe68cffca79")
+		)
+		(instances
+			(project "tagger"
+				(path "/7f9981c1-8446-4881-979b-6d88a629918c/71e7c18f-1f33-427d-8bd6-9eec09af0cc4"
+					(reference "TP5")
 					(unit 1)
 				)
 			)

@@ -4851,7 +4851,7 @@
 	)
 	(text "IS RTS CORRECT?"
 		(exclude_from_sim no)
-		(at 207.01 13.97 0)
+		(at 220.98 54.356 0)
 		(effects
 			(font
 				(size 3.81 3.81)
@@ -5331,10 +5331,6 @@
 		(uuid "57b7eae0-1e4f-4c39-875c-7227b194613a")
 	)
 	(no_connect
-		(at 111.76 102.87)
-		(uuid "63f0245d-f5d8-4dca-962f-945f1011d2d3")
-	)
-	(no_connect
 		(at 76.2 62.23)
 		(uuid "708bc88d-9f97-41a5-9a60-52f9245bfdcb")
 	)
@@ -5796,6 +5792,16 @@
 	)
 	(wire
 		(pts
+			(xy 111.76 102.87) (xy 114.3 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2f8e1af7-9e74-4c84-845b-dbc0870d221f")
+	)
+	(wire
+		(pts
 			(xy 248.92 52.07) (xy 246.38 52.07)
 		)
 		(stroke
@@ -6186,16 +6192,6 @@
 	)
 	(wire
 		(pts
-			(xy 111.76 67.31) (xy 114.3 67.31)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "59a8b86d-2e75-4a11-842f-131a16ce6a04")
-	)
-	(wire
-		(pts
 			(xy 73.66 59.69) (xy 76.2 59.69)
 		)
 		(stroke
@@ -6364,16 +6360,6 @@
 			(type default)
 		)
 		(uuid "6f5ea320-fa81-4c8f-8562-c2b958761905")
-	)
-	(wire
-		(pts
-			(xy 73.66 69.85) (xy 76.2 69.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6ff448cd-b080-4272-88da-dc312d41cf62")
 	)
 	(wire
 		(pts
@@ -6634,6 +6620,16 @@
 			(type default)
 		)
 		(uuid "8d563eee-8a48-411d-adf1-6581d1875045")
+	)
+	(wire
+		(pts
+			(xy 73.66 69.85) (xy 76.2 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8d9615e3-d013-4986-9964-9dc184d38d73")
 	)
 	(wire
 		(pts
@@ -7267,6 +7263,16 @@
 	)
 	(wire
 		(pts
+			(xy 73.66 74.93) (xy 76.2 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e13d1039-3016-4622-a1b2-451e7a64aaa9")
+	)
+	(wire
+		(pts
 			(xy 226.06 36.83) (xy 226.06 38.1)
 		)
 		(stroke
@@ -7596,16 +7602,6 @@
 		)
 		(uuid "13ef43fe-cdbb-4725-9032-fe6293af2551")
 	)
-	(label "SPI_MOSI"
-		(at 144.78 185.42 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "16c4664a-ae0a-4b0c-a259-3b4a0d0f6897")
-	)
 	(label "MOTOR_GND"
 		(at 38.1 114.3 0)
 		(effects
@@ -7725,6 +7721,16 @@
 			(justify right bottom)
 		)
 		(uuid "457c0617-d376-40b0-86db-5bdaf9d3dba2")
+	)
+	(label "SPI_PICO"
+		(at 144.78 185.42 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "45c21ac3-d55b-46d1-b98b-b6bf24b3f12a")
 	)
 	(label "SWD_RESET"
 		(at 63.5 46.99 0)
@@ -7987,12 +7993,12 @@
 		(uuid "959b80f5-a044-4d85-8cdc-3303f066a79a")
 	)
 	(label "~{DISPLAY_CS}"
-		(at 114.3 67.31 0)
+		(at 73.66 69.85 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "986044f4-d50b-41d5-8d87-4446fd927468")
 	)
@@ -8096,7 +8102,7 @@
 		)
 		(uuid "b5d084e7-70d8-40da-a97d-6b5aeebee3d1")
 	)
-	(label "DISPLAY_CS"
+	(label "~{DISPLAY_CS}"
 		(at 127 182.88 180)
 		(effects
 			(font
@@ -8104,7 +8110,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "b66b4394-cecd-4d11-a886-0d142ba06f60")
+		(uuid "b780366a-e932-4413-b915-b9b2f611e939")
 	)
 	(label "SWD_SWCLK"
 		(at 29.21 167.64 180)
@@ -8167,12 +8173,12 @@
 		(uuid "ccc971f7-cf35-4d44-8c2b-1862d099d5b4")
 	)
 	(label "GRIP_DOUT"
-		(at 73.66 69.85 180)
+		(at 114.3 102.87 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "dcd749d1-5ae2-4427-8735-3b6429c6f175")
 	)
@@ -8187,12 +8193,12 @@
 		(uuid "dd243542-5221-4fba-b37e-c9df714b00aa")
 	)
 	(label "DISPLAY_RST"
-		(at 125.73 30.48 0)
+		(at 73.66 74.93 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "e539a1f9-9675-410f-9bf6-fe1d0cdd9f94")
 	)
@@ -12449,7 +12455,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Crystal:Crystal_SMD_0603-4Pin_6.0x3.5mm"
+		(property "Footprint" "Crystal:Crystal_SMD_Abracon_ABM3B-4Pin_5.0x3.2mm"
 			(at 86.36 177.8 0)
 			(effects
 				(font
