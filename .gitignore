@@ -2,3 +2,4 @@
 *.kicad_prl
 *-backups/
 fp-info-cache
+.DS_Store
