@@ -1902,6 +1902,107 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "power:PWR_FLAG"
+			(power)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#FLG"
+				(at 0 1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "PWR_FLAG"
+				(at 0 3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Special symbol for telling ERC where power comes from"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "flag power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "PWR_FLAG_0_0"
+				(pin power_out line
+					(at 0 0 90)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "PWR_FLAG_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 	)
 	(rectangle
 		(start 123.19 166.37)
@@ -2011,6 +2112,18 @@
 		)
 		(uuid "abe2ad71-4d19-4aac-a349-71c9b7296e92")
 	)
+	(text "XBee is attatched to UART1\non the STM32 to allow the\nXBee to re-program the STM32\nwirelessly."
+		(exclude_from_sim no)
+		(at 155.448 95.25 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 132 132 132 1)
+			)
+			(justify left top)
+		)
+		(uuid "cecd02a5-98e7-40e2-b448-61446d6c9066")
+	)
 	(text "Digi XBee® 3 ZigBee® User Guide P.g. 181\n\nIndicates the status of the module.\nBlinks if paired\nHIGH is unpaired\nBlinks fast if pairing\nBlinks error codes if comission button pressed once"
 		(exclude_from_sim no)
 		(at 204.216 96.52 0)
@@ -2059,6 +2172,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "752b64bb-bb23-4444-9479-573150437eb7")
+	)
+	(junction
+		(at 149.86 173.99)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8a7109e3-e93b-4284-a997-90e281c7bd50")
 	)
 	(junction
 		(at 107.95 134.62)
@@ -2280,6 +2399,16 @@
 	)
 	(wire
 		(pts
+			(xy 149.86 173.99) (xy 137.16 173.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "57896939-4c97-44dd-b2cc-232bd5ccacf8")
+	)
+	(wire
+		(pts
 			(xy 261.62 99.06) (xy 276.86 99.06)
 		)
 		(stroke
@@ -2297,6 +2426,16 @@
 			(type default)
 		)
 		(uuid "645eccde-131b-47aa-b402-ce76b6f62644")
+	)
+	(wire
+		(pts
+			(xy 149.86 172.72) (xy 149.86 173.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6c33eeb0-8037-4fff-adec-04fa501ee9ab")
 	)
 	(wire
 		(pts
@@ -2460,7 +2599,7 @@
 	)
 	(wire
 		(pts
-			(xy 139.7 173.99) (xy 137.16 173.99)
+			(xy 151.13 173.99) (xy 149.86 173.99)
 		)
 		(stroke
 			(width 0)
@@ -2769,7 +2908,7 @@
 		(uuid "3b02e6a5-b5b3-4dbe-a129-9c18d7eb813c")
 	)
 	(label "UART_PWR"
-		(at 139.7 173.99 0)
+		(at 151.13 173.99 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4380,7 +4519,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
 			(at 107.95 69.85 0)
 			(effects
 				(font
@@ -4443,6 +4582,71 @@
 			(project "tagger"
 				(path "/7f9981c1-8446-4881-979b-6d88a629918c/b67527ae-871d-46f9-8cb4-d3003ac65ae8"
 					(reference "D9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 149.86 172.72 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "bacf5b1a-11d4-45e3-97cd-2e7bccc17ccd")
+		(property "Reference" "#FLG03"
+			(at 149.86 170.815 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 149.86 168.402 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 149.86 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 149.86 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 149.86 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "38f4f489-d787-4d85-952c-0a271b7a7453")
+		)
+		(instances
+			(project ""
+				(path "/7f9981c1-8446-4881-979b-6d88a629918c/b67527ae-871d-46f9-8cb4-d3003ac65ae8"
+					(reference "#FLG03")
 					(unit 1)
 				)
 			)
@@ -4864,7 +5068,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
 			(at 101.6 63.5 0)
 			(effects
 				(font
