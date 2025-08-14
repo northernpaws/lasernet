@@ -10532,6 +10532,7 @@
 		)
 	)
 	(footprint "Connector_PinSocket_2.00mm:PinSocket_2x11_P2.00mm_Horizontal"
+		(locked yes)
 		(layer "F.Cu")
 		(uuid "91074601-fe38-4db7-8646-0038227289e5")
 		(at 152 112.675 90)
