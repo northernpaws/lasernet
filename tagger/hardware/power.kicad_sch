@@ -1483,7 +1483,7 @@
 	)
 	(rectangle
 		(start 17.78 17.78)
-		(end 59.69 44.45)
+		(end 59.69 50.8)
 		(stroke
 			(width 0)
 			(type dash)
@@ -1658,7 +1658,7 @@
 	)
 	(wire
 		(pts
-			(xy 57.15 40.64) (xy 57.15 41.91)
+			(xy 49.53 46.99) (xy 49.53 48.26)
 		)
 		(stroke
 			(width 0)
@@ -1718,7 +1718,7 @@
 	)
 	(wire
 		(pts
-			(xy 48.26 41.91) (xy 57.15 41.91)
+			(xy 40.64 48.26) (xy 49.53 48.26)
 		)
 		(stroke
 			(width 0)
@@ -1918,7 +1918,17 @@
 	)
 	(wire
 		(pts
-			(xy 48.26 40.64) (xy 48.26 41.91)
+			(xy 55.88 40.64) (xy 55.88 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7f05572d-bc52-48d0-a3ff-05488a6abdb3")
+	)
+	(wire
+		(pts
+			(xy 40.64 46.99) (xy 40.64 48.26)
 		)
 		(stroke
 			(width 0)
@@ -2636,6 +2646,185 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 55.88 43.18 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "515e4724-85d7-42a4-a5e8-037111febc90")
+		(property "Reference" "#PWR021"
+			(at 55.88 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 55.88 47.752 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 55.88 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 55.88 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 55.88 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b4ecad63-789f-4d23-9741-f6f1c37f9709")
+		)
+		(instances
+			(project "tagger"
+				(path "/7f9981c1-8446-4881-979b-6d88a629918c/71e7c18f-1f33-427d-8bd6-9eec09af0cc4"
+					(reference "#PWR021")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 55.88 40.64 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5abeb71a-2aa5-4084-a6d1-559bf19eff6b")
+		(property "Reference" "TP17"
+			(at 54.61 38.608 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "GND"
+			(at 54.61 36.068 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
+			(at 60.96 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 60.96 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 55.88 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Height" ""
+			(at 55.88 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Name" ""
+			(at 55.88 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" ""
+			(at 55.88 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Part Number" ""
+			(at 55.88 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Price/Stock" ""
+			(at 55.88 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLC" ""
+			(at 55.88 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1308fddf-ec6b-4674-b648-b00a03c4b83a")
+		)
+		(instances
+			(project "tagger"
+				(path "/7f9981c1-8446-4881-979b-6d88a629918c/71e7c18f-1f33-427d-8bd6-9eec09af0cc4"
+					(reference "TP17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:VDD")
 		(at 55.88 26.67 0)
 		(unit 1)
@@ -3232,7 +3421,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "a97c88ad-0d42-4881-a190-3743c5acada3")
 		(property "Reference" "J6"
 			(at 34.29 29.21 0)
@@ -3243,7 +3432,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TETHER_POWER"
+		(property "Value" "POWER"
 			(at 34.29 31.75 0)
 			(effects
 				(font
@@ -3329,7 +3518,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 43.18 38.354 0)
+			(at 43.18 38.862 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3377,7 +3566,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 57.15 40.64 0)
+		(at 49.53 46.99 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3385,7 +3574,7 @@
 		(dnp no)
 		(uuid "c13b2272-fa7a-4ed0-ae06-462f427db1b5")
 		(property "Reference" "TP16"
-			(at 55.88 38.608 0)
+			(at 48.26 44.958 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3394,7 +3583,7 @@
 			)
 		)
 		(property "Value" "VDD"
-			(at 55.88 36.068 0)
+			(at 48.26 42.418 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3403,7 +3592,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 62.23 40.64 0)
+			(at 54.61 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3412,7 +3601,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 62.23 40.64 0)
+			(at 54.61 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3421,7 +3610,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 57.15 40.64 0)
+			(at 49.53 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3430,7 +3619,7 @@
 			)
 		)
 		(property "Height" ""
-			(at 57.15 40.64 0)
+			(at 49.53 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3438,7 +3627,7 @@
 			)
 		)
 		(property "Manufacturer_Name" ""
-			(at 57.15 40.64 0)
+			(at 49.53 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3446,7 +3635,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" ""
-			(at 57.15 40.64 0)
+			(at 49.53 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3454,7 +3643,7 @@
 			)
 		)
 		(property "Mouser Part Number" ""
-			(at 57.15 40.64 0)
+			(at 49.53 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3462,7 +3651,7 @@
 			)
 		)
 		(property "Mouser Price/Stock" ""
-			(at 57.15 40.64 0)
+			(at 49.53 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3470,7 +3659,7 @@
 			)
 		)
 		(property "JLC" ""
-			(at 57.15 40.64 0)
+			(at 49.53 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3567,16 +3756,15 @@
 	)
 	(symbol
 		(lib_id "power:VDD")
-		(at 48.26 40.64 0)
+		(at 40.64 46.99 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "d223c98d-d44b-4686-8490-a2693a3b9212")
 		(property "Reference" "#PWR04"
-			(at 48.26 44.45 0)
+			(at 40.64 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3585,7 +3773,7 @@
 			)
 		)
 		(property "Value" "VDD"
-			(at 48.26 35.56 0)
+			(at 40.64 42.418 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3593,7 +3781,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 48.26 40.64 0)
+			(at 40.64 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3602,7 +3790,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 48.26 40.64 0)
+			(at 40.64 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3611,7 +3799,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VDD\""
-			(at 48.26 40.64 0)
+			(at 40.64 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
